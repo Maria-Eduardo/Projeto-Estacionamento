@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Estaciona</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"> 
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="js/index.js"></script> 
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <script>
+        $(function () { 
+            $("#header").load("includes/header.html"); 
+            $("#footer").load("includes/footer.html");
+        //alert("OLA"); 
+        }); 
+    </script>
+
+</head> 
+<body> 
+    <div id="header"></div> 
+      <!-- Conteudo -->
+    <div class="container" style="text-align: center;"> 
+        <img src="image/estacionamento.png" alt="" width="200px">
+        
+            <h1>Dados do lugar</h1>  
+            <label for="inputCor" class="form-label">Cor:</label> 
+            <select class="form-select" id="inputCor">
+                <option value="...">...</option> 
+                <option value="Amarelo">Amarelo</option> 
+                <option value="Azul">Azul</option> 
+                <option value="Laranja">Laranja</option> 
+                <option value="Verde">Verde</option> 
+                <option value="Vermelho">Vermelho</option>
+            </select> 
+            <label for="inputSeccao" class="form-label">Secção:</label>
+            <select class="form-select " id="inputSeccao">
+                <option value="secção"></option>
+                <option value="secção">Secção 1</option>
+                <option value="secção">Secção 2</option>
+                <option value="secção">Secção 3</option>
+                <option value="secção">Secção 4</option>
+            </select> 
+           <!-- <input type="text" id="inputSeccao" class="form-control">-->
+    
+            <label for="inputNumero" class="form-label">Numero:</label> 
+            <input type="number" id="inputNumero" class="form-control"> 
+            <br /><br />
+    
+            <button onclick="guardaDados();" class="btn btn-primary">Guardar lugar</button>
+            <button onclick="showHistoric();" class="btn btn-secondary">Mostrar Histórico</button>
+            <button onclick="limparHistorico();" class="btn btn-danger">Limpar Histórico</button>
+            <div id="divHistoric" style="margin-top: 20px;"></div> 
+        </div> 
+
+    
+    <!-- Modal -->
+
+    <div class="modal fade" id="MensagemModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog"> 
+            <div class="modal-content"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Estaciona</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"> 
+                    Lugar guardado! 
+                </div>   
+                <div class="modal-footer"> 
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button> 
+                </div> 
+            </div>
+        </div>
+    </div>    
+        
+   
+    <div id="footer"></div> 
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
